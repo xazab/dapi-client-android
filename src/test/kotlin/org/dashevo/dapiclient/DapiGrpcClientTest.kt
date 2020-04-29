@@ -70,7 +70,7 @@ class DapiGrpcClientTest {
     }
 
 
-    @Test
+//    @Test
     fun getDPNSContractTest() {
 
         val client = DapiClient(SingleMasternode(EvoNetParams.MASTERNODES[0]))
@@ -158,7 +158,7 @@ class DapiGrpcClientTest {
       "signature": "IFue3isoXSuYd0Ky8LvYjOMExwq69XaXPvi+IE+YT0sSD6N22P75xWZNFqO8RkZRqtmO7+EwyMX7NVETcD2HTmw=",
     }
      */
-    @Test
+//    @Test
     fun getDocumentsTest() {
 
         val masternodeList = EvoNetParams.MASTERNODES
@@ -186,7 +186,7 @@ class DapiGrpcClientTest {
         }
     }
 
-    @Test
+//    @Test
     fun getIdentityAndTransactionTest() {
         val tx = "0100000001745e930675f395c817d3efa10631a9f5ce86fad14e145d7518b1a20ce9fd5349000000006b483045022100fc7cab994fb62bce2e286124d696cdd09120ac8ae94e4598977f1a27a582f747022074da17c595b531ce81b70d4116425a6df9b2a71f958f399dcabab9f205b2ae9e01210326e680733eefbf271cd20fddf40e75a89923b1cf39a6162baf770de040efb718ffffffff02e08f3001000000001976a9147b560e12927197cfc4267f752280910a09db8fdb88ac409c000000000000166a146d22ab738e8b321738b382e1a10f4d0c50c905e900000000"
 
