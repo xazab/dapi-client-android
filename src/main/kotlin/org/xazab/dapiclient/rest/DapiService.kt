@@ -4,9 +4,9 @@
  * This source code is licensed under the MIT license found in the
  * COPYING file in the root directory of this source tree.
  */
-package org.dashevo.dapiclient.rest
-import org.dashevo.dapiclient.model.JsonRPCRequest
-import org.dashevo.dapiclient.model.JsonRPCResponse
+package org.xazab.dapiclient.rest
+import org.xazab.dapiclient.model.JsonRPCRequest
+import org.xazab.dapiclient.model.JsonRPCResponse
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.POST

@@ -4,13 +4,13 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-package org.dashevo.dapiclient.provider
+package org.xazab.dapiclient.provider
 
 import com.google.common.base.Stopwatch
 import io.grpc.ManagedChannel
 import io.grpc.ManagedChannelBuilder
-import org.dash.platform.dapi.v0.CoreGrpc
-import org.dash.platform.dapi.v0.PlatformGrpc
+import org.xazab.platform.dapi.v0.CoreGrpc
+import org.xazab.platform.dapi.v0.PlatformGrpc
 import org.slf4j.LoggerFactory
 import java.util.concurrent.TimeUnit
 

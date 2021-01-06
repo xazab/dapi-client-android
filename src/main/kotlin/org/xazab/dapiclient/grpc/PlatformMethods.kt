@@ -4,13 +4,13 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-package org.dashevo.dapiclient.grpc
+package org.xazab.dapiclient.grpc
 
 import com.google.protobuf.ByteString
-import org.dash.platform.dapi.v0.PlatformOuterClass
-import org.dashevo.dapiclient.model.DocumentQuery
-import org.dashevo.dapiclient.provider.DAPIGrpcMasternode
-import org.dashevo.dpp.statetransition.StateTransition
+import org.xazab.platform.dapi.v0.PlatformOuterClass
+import org.xazab.dapiclient.model.DocumentQuery
+import org.xazab.dapiclient.provider.DAPIGrpcMasternode
+import org.xazab.dpp.statetransition.StateTransition
 
 class GetDocumentsMethod(contractId: ByteArray, type: String, documentQuery: DocumentQuery) : GrpcMethod {
 

@@ -1,6 +1,6 @@
 {
   "protocolVersion": 0,
-  "$schema": "https://schema.dash.org/dpp-0-4-0/meta/data-contract",
+  "$schema": "https://schema.xazab.xyz/dpp-0-4-0/meta/data-contract",
   "ownerId": "5SpfYEamefbSYpSKZGUh45W1qfKspUyZFaEYxxuGRjfk",
   "documents": {
     "contactInfo": {

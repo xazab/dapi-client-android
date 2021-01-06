@@ -1,4 +1,4 @@
-package org.dashevo.dapiclient.model
+package org.xazab.dapiclient.model
 
 data class JsonRPCRequest<T: Any>(
         val method: String,

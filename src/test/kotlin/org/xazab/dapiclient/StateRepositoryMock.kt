@@ -1,11 +1,11 @@
-package org.dashevo.dapiclient
+package org.xazab.dapiclient
 
 import org.bitcoinj.core.Block
-import org.dashevo.dpp.StateRepository
-import org.dashevo.dpp.contract.DataContract
-import org.dashevo.dpp.document.Document
-import org.dashevo.dpp.identifier.Identifier
-import org.dashevo.dpp.identity.Identity
+import org.xazab.dpp.StateRepository
+import org.xazab.dpp.contract.DataContract
+import org.xazab.dpp.document.Document
+import org.xazab.dpp.identifier.Identifier
+import org.xazab.dpp.identity.Identity
 
 class StateRepositoryMock : StateRepository {
     override fun fetchDataContract(id: Identifier): DataContract? {

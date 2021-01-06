@@ -5,7 +5,7 @@
  * COPYING file in the root directory of this source tree.
  */
 
-package org.dashevo.dapiclient
+package org.xazab.dapiclient
 
 import com.google.common.base.Preconditions
 import com.google.protobuf.ByteString
@@ -14,18 +14,18 @@ import io.grpc.StatusRuntimeException
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.bitcoinj.evolution.SimplifiedMasternodeListManager
-import org.dash.platform.dapi.v0.CoreOuterClass
+import org.xazab.platform.dapi.v0.CoreOuterClass
 import java.util.concurrent.TimeUnit
-import org.dash.platform.dapi.v0.PlatformOuterClass
-import org.dashevo.dapiclient.grpc.*
-import org.dashevo.dapiclient.model.DocumentQuery
-import org.dashevo.dapiclient.model.GetStatusResponse
-import org.dashevo.dapiclient.model.JsonRPCRequest
-import org.dashevo.dapiclient.provider.*
-import org.dashevo.dapiclient.rest.DapiService
-import org.dashevo.dpp.statetransition.StateTransition
-import org.dashevo.dpp.toBase58
-import org.dashevo.dpp.toHexString
+import org.xazab.platform.dapi.v0.PlatformOuterClass
+import org.xazab.dapiclient.grpc.*
+import org.xazab.dapiclient.model.DocumentQuery
+import org.xazab.dapiclient.model.GetStatusResponse
+import org.xazab.dapiclient.model.JsonRPCRequest
+import org.xazab.dapiclient.provider.*
+import org.xazab.dapiclient.rest.DapiService
+import org.xazab.dpp.statetransition.StateTransition
+import org.xazab.dpp.toBase58
+import org.xazab.dpp.toHexString
 import org.json.JSONObject
 import org.slf4j.LoggerFactory
 import retrofit2.Retrofit

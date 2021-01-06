@@ -4,12 +4,12 @@
  * This source code is licensed under the MIT license found in the
  * COPYING file in the root directory of this source tree.
  */
-package org.dashevo.dapiclient.model
+package org.xazab.dapiclient.model
 
 import com.google.common.base.Preconditions
-import org.dashevo.dpp.BaseObject
-import org.dashevo.dpp.identifier.Identifier
-import org.dashevo.dpp.util.Cbor
+import org.xazab.dpp.BaseObject
+import org.xazab.dpp.identifier.Identifier
+import org.xazab.dpp.util.Cbor
 import org.json.JSONArray
 
 /**

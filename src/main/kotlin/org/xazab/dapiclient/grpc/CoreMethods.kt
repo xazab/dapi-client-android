@@ -4,11 +4,11 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-package org.dashevo.dapiclient.grpc
+package org.xazab.dapiclient.grpc
 
 import com.google.protobuf.ByteString
-import org.dash.platform.dapi.v0.CoreOuterClass
-import org.dashevo.dapiclient.provider.DAPIGrpcMasternode
+import org.xazab.platform.dapi.v0.CoreOuterClass
+import org.xazab.dapiclient.provider.DAPIGrpcMasternode
 
 class GetBlockMethod(private val getBlockRequest: CoreOuterClass.GetBlockRequest) : GrpcMethod {
     override fun execute(masternode: DAPIGrpcMasternode): Any {

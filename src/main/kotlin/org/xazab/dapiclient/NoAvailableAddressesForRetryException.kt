@@ -4,8 +4,8 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-package org.dashevo.dapiclient
+package org.xazab.dapiclient
 
 import io.grpc.StatusRuntimeException
 
-class MaxRetriesReachedException(e: StatusRuntimeException) : Exception(e)
+class NoAvailableAddressesForRetryException(e: StatusRuntimeException) : Exception(e)

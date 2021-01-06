@@ -1,4 +1,4 @@
-package org.dashevo.dapiclient
+package org.xazab.dapiclient
 
 import com.hashengineering.crypto.X11
 import io.grpc.Status
@@ -7,14 +7,14 @@ import org.bitcoinj.core.Base58
 import org.bitcoinj.core.ECKey
 import org.bitcoinj.core.Sha256Hash
 import org.bitcoinj.params.PalinkaDevNetParams
-import org.dashevo.dapiclient.model.DocumentQuery
-import org.dashevo.dapiclient.provider.DAPIAddress
-import org.dashevo.dapiclient.provider.ListDAPIAddressProvider
-import org.dashevo.dpp.contract.ContractFactory
-import org.dashevo.dpp.document.Document
-import org.dashevo.dpp.identity.IdentityFactory
-import org.dashevo.dpp.toHexString
-import org.dashevo.dpp.util.Cbor
+import org.xazab.dapiclient.model.DocumentQuery
+import org.xazab.dapiclient.provider.DAPIAddress
+import org.xazab.dapiclient.provider.ListDAPIAddressProvider
+import org.xazab.dpp.contract.ContractFactory
+import org.xazab.dpp.document.Document
+import org.xazab.dpp.identity.IdentityFactory
+import org.xazab.dpp.toHexString
+import org.xazab.dpp.util.Cbor
 import org.json.JSONObject
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
@@ -25,7 +25,7 @@ class DapiGrpcClientTest {
     val PARAMS = PalinkaDevNetParams.get();
     val masternodeList = PalinkaDevNetParams.get().defaultMasternodeList.toList()
     val dpnsContractId = Base58.decode("H9AxLAvgxEpq72pDg41nsqR3bY5Cv9hTT6yZdKzY3PaE") //DPNS contract
-    val dashPayContractId = Base58.decode("Fxf3w1rsUvRxW8WsVnQcUNgtgVn8w47BwZtQPAsJWkkH")
+    val xazabPayContractId = Base58.decode("Fxf3w1rsUvRxW8WsVnQcUNgtgVn8w47BwZtQPAsJWkkH")
     val identityIdString = "4jjwnJr2ufABdWqKKonoA9uBCRXF8jQ929KnHKEgZRJu"
     val stateRepository = StateRepositoryMock()
 
@@ -103,14 +103,14 @@ class DapiGrpcClientTest {
     }
 
     @Test
-    fun getDashPayContract() {
+    fun getXazabPayContract() {
 
         val client = DapiClient(masternodeList)
         try {
-            val contractBytes = client.getDataContract(dashPayContractId)
+            val contractBytes = client.getDataContract(xazabPayContractId)
 
             val contract = ContractFactory(stateRepository).createFromBuffer(contractBytes!!.toByteArray())
-            val jsonDpnsFile = File("src/test/resources/dashpay-contract.json").readText()
+            val jsonDpnsFile = File("src/test/resources/xazab-contract.json").readText()
             val jsonDpns = JSONObject(jsonDpnsFile)
             val rawContract = jsonDpns.toMap()
             val dpnsContract = ContractFactory(stateRepository).createFromObject(rawContract)
@@ -141,7 +141,7 @@ class DapiGrpcClientTest {
         try {
             //devnet-evonet
             val query = DocumentQuery.Builder()
-                    .where(listOf("normalizedParentDomainName", "==", "dash").toMutableList())
+                    .where(listOf("normalizedParentDomainName", "==", "xazab").toMutableList())
                     //.where(listOf("normalizedLabel", "startsWith", "test").toMutableList())
                     .build()
             val documents = client.getDocuments(dpnsContractId, "domain", query)

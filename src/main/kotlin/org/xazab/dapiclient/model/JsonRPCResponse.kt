@@ -1,4 +1,4 @@
-package org.dashevo.dapiclient.model
+package org.xazab.dapiclient.model
 
 open class JsonRPCResponse<T: Any>(
         val result: T? = null,

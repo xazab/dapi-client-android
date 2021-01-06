@@ -1,6 +1,6 @@
 {
   "protocolVersion": 0,
-  "$schema": "https://schema.dash.org/dpp-0-4-0/meta/data-contract",
+  "$schema": "https://schema.xazab.xyz/dpp-0-4-0/meta/data-contract",
   "ownerId": "4jjwnJr2ufABdWqKKonoA9uBCRXF8jQ929KnHKEgZRJu",
   "documents": {
     "preorder": {
@@ -29,10 +29,10 @@
           "unique": true
         },
         {
-          "properties": [{"records.dashUniqueIdentityId": "asc"}],
+          "properties": [{"records.xazabUniqueIdentityId": "asc"}],
           "unique": true
         },
-        {"properties": [{"records.dashAliasIdentityId": "asc"}]}
+        {"properties": [{"records.xazabAliasIdentityId": "asc"}]}
       ],
       "$comment": "In order to register a domain you need to create a preorder. The preorder step is needed to prevent man-in-the-middle attacks. normalizedLabel + '.' + normalizedParentDomain must not be longer than 253 chars length as defined by RFC 1035. Domain documents are immutable: modification and deletion are restricted",
       "additionalProperties": false,
@@ -54,7 +54,7 @@
         },
         "normalizedParentDomainName": {
           "pattern": "^$|^((?!-)[a-z0-9-\\.]{0,189}[a-z0-9])$",
-          "description": "A full parent domain name in lowercase for case-insensitive uniqueness validation. e.g. 'dash'",
+          "description": "A full parent domain name in lowercase for case-insensitive uniqueness validation. e.g. 'xazab'",
           "$comment": "Must either be equal to an existing domain or empty to create a top level domain. Only the data contract owner can create top level domains.",
           "type": "string",
           "maxLength": 190,
@@ -75,24 +75,24 @@
           "maxLength": 63
         },
         "records": {
-          "$comment": "Constraint with max and min properties ensure that only one identity record is used - either a `dashUniqueIdentityId` or a `dashAliasIdentityId`",
+          "$comment": "Constraint with max and min properties ensure that only one identity record is used - either a `xazabUniqueIdentityId` or a `xazabAliasIdentityId`",
           "maxProperties": 1,
           "additionalProperties": false,
           "type": "object",
           "properties": {
-            "dashAliasIdentityId": {
+            "xazabAliasIdentityId": {
               "minItems": 32,
               "maxItems": 32,
-              "contentMediaType": "application/x.dash.dpp.identifier",
+              "contentMediaType": "application/x.xazab.dpp.identifier",
               "byteArray": true,
               "description": "Identity ID to be used to create alias names for the Identity",
               "$comment": "Must be equal to the document owner",
               "type": "array"
             },
-            "dashUniqueIdentityId": {
+            "xazabUniqueIdentityId": {
               "minItems": 32,
               "maxItems": 32,
-              "contentMediaType": "application/x.dash.dpp.identifier",
+              "contentMediaType": "application/x.xazab.dpp.identifier",
               "byteArray": true,
               "description": "Identity ID to be used to create the primary name the Identity",
               "$comment": "Must be equal to the document owner",

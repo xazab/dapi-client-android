@@ -4,8 +4,6 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-package org.dashevo.dapiclient
+package org.xazab.dapiclient.provider
 
-import io.grpc.StatusRuntimeException
-
-class NoAvailableAddressesForRetryException(e: StatusRuntimeException) : Exception(e)
+abstract class DAPIMasternode(val address: DAPIAddress)
